@@ -7,6 +7,7 @@ namespace Database\Seeders;
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use App\Models\Wallet;
+use App\Models\WalletRecurringTransfer;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -25,5 +26,7 @@ class DatabaseSeeder extends Seeder
             'name' => 'Another Guy',
             'email' => 'another.guy@test.fr',
         ]);
+
+        WalletRecurringTransfer::factory()->create(10);
     }
 }

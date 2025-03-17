@@ -20,7 +20,7 @@ return new class extends Migration
 
             $table->foreignId('transfer_id')->nullable()->constrained('wallet_transfers');
 
-            $table->integer('amount')->unsigned();
+            $table->integer('amount')->unsigned(); // What if i want to tranfer 123,56€? Est-ce multiplié par 100 puis divisé par 100 lors de l'affichage ?
             $table->string('type');
             $table->string('reason');
 
